@@ -3,7 +3,6 @@ package com.acc.accenfarm.model;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import java.sql.Date;
 
 @Data
 @Entity
@@ -11,7 +10,12 @@ import java.sql.Date;
 public class Chicken {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer Id;
-    private Integer Quantity;
-    private String Date;
+    private Integer id;
+    private Integer buyprice;
+    private Integer sellprice;
+    private Character activeind;
+    private String state;
+    private String createdttm;
+    private String enddttm;
+
 }

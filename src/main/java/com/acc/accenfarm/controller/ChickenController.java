@@ -23,7 +23,7 @@ public class ChickenController {
         return ResponseEntity.status(HttpStatus.CREATED).body(chickenService.saveChicken(chicken));
     }
 
-    @GetMapping
+    @GetMapping(value = "/allchicken")
     public ResponseEntity<Page<Chicken>> getAllChicken(
             @RequestParam(required = false, defaultValue = "0")Integer page,
             @RequestParam(required = false, defaultValue = "10") Integer size,
